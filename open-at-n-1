@@ -1,0 +1,5 @@
+#!/bin/bash
+target=$1
+length=`pdfinfo $target | grep Pages | awk '{ print $2 }'`
+./open-skim-at-page.scpt $target $(($length-1))
+# ./open-pdf-at-page.scpt $(($length-1))
