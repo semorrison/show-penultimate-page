@@ -1,7 +1,7 @@
 #!/bin/bash
-# open $1
-sleep 2
-./open-at-n-1 $1
+
+# I just run this as ./keep-at-n-1 ~/Dropbox/tqft.net/web/notes/
+
 # when-changed is from https://github.com/joh/when-changed
 # install with: 'sudo pip install https://github.com/joh/when-changed/archive/master.zip'
-when-changed $1 -c ./open-at-n-1 %f
+when-changed -r $1 -c ./open-at-n-1 %f
